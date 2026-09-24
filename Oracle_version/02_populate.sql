@@ -5,17 +5,35 @@
 -- ============================================
 
 INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
-VALUES
-    (1, 'Jose Rodrigues', 19740411, 'joserodrigues74@gmail.com'),
-    (2, 'Mariana Costa', 19920823, 'marianacosta92@gmail.com'),
-    (3, 'Pedro Martins', 19861105, 'pedromartins86@gmail.com'),
-    (4, 'Ines Ferreira', 20010317, 'inesferreira01@gmail.com'),
-    (5, 'Ricardo Almeida', 19780929, 'ricardoalmeida78@gmail.com'),
-    (6, 'Sofia Mendes', 19951212, 'sofiamendes95@gmail.com'),
-    (7, 'Tiago Carvalho', 19830407, 'tiagocarvalho83@gmail.com'),
-    (8, 'Beatriz Santos', 19990621, 'beatrizsantos99@gmail.com'),
-    (9, 'Miguel Pereira', 19691203, 'miguelpereira69@gmail.com'),
-    (10, 'Carolina Lopes', 19880126, 'carolinalopes88@gmail.com');
+VALUES (1, 'Jose Rodrigues', 19740411, 'joserodrigues74@gmail.com');
+
+INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
+VALUES (2, 'Mariana Costa', 19920823, 'marianacosta92@gmail.com');
+
+INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
+VALUES (3, 'Pedro Martins', 19861105, 'pedromartins86@gmail.com');
+
+INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
+VALUES (4, 'Ines Ferreira', 20010317, 'inesferreira01@gmail.com');
+
+INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
+VALUES (5, 'Ricardo Almeida', 19780929, 'ricardoalmeida78@gmail.com');
+
+INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
+VALUES (6, 'Sofia Mendes', 19951212, 'sofiamendes95@gmail.com');
+
+INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
+VALUES (7, 'Tiago Carvalho', 19830407, 'tiagocarvalho83@gmail.com');
+
+INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
+VALUES (8, 'Beatriz Santos', 19990621, 'beatrizsantos99@gmail.com');
+
+INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
+VALUES (9, 'Miguel Pereira', 19691203, 'miguelpereira69@gmail.com');
+
+INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
+VALUES (10, 'Carolina Lopes', 19880126, 'carolinalopes88@gmail.com');
+
 
 -- ============================================
 -- MEDICOS
