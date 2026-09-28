@@ -1,0 +1,10 @@
+CREATE USER Healthcare
+IDENTIFIED BY "HealthPass";
+
+GRANT   CREATE SESSION,
+        CREATE TABLE,
+        CREATE VIEW,
+        CREATE SEQUENCE,
+        CREATE PROCEDURE,
+        CREATE TRIGGER
+TO Healthcare;

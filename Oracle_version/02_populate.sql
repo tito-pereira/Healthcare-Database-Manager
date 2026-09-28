@@ -4,102 +4,136 @@
 -- UTENTES
 -- ============================================
 
-INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
-VALUES (1, 'Jose Rodrigues', 19740411, 'joserodrigues74@gmail.com');
-
-INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
-VALUES (2, 'Mariana Costa', 19920823, 'marianacosta92@gmail.com');
-
-INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
-VALUES (3, 'Pedro Martins', 19861105, 'pedromartins86@gmail.com');
-
-INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
-VALUES (4, 'Ines Ferreira', 20010317, 'inesferreira01@gmail.com');
-
-INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
-VALUES (5, 'Ricardo Almeida', 19780929, 'ricardoalmeida78@gmail.com');
-
-INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
-VALUES (6, 'Sofia Mendes', 19951212, 'sofiamendes95@gmail.com');
-
-INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
-VALUES (7, 'Tiago Carvalho', 19830407, 'tiagocarvalho83@gmail.com');
-
-INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
-VALUES (8, 'Beatriz Santos', 19990621, 'beatrizsantos99@gmail.com');
-
-INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
-VALUES (9, 'Miguel Pereira', 19691203, 'miguelpereira69@gmail.com');
-
-INSERT INTO Utentes (id_utente, nome_utente, data_nasc_ut, email_ut)
-VALUES (10, 'Carolina Lopes', 19880126, 'carolinalopes88@gmail.com');
-
+INSERT ALL
+    INTO Utentes (nome_utente, data_nasc_ut, email_ut)
+    VALUES ('Jose Rodrigues', DATE '1974-04-11', 'joserodrigues74@gmail.com')
+    INTO Utentes (nome_utente, data_nasc_ut, email_ut)
+    VALUES ('Mariana Costa', DATE '1992-08-23', 'marianacosta92@gmail.com')
+    INTO Utentes (nome_utente, data_nasc_ut, email_ut)
+    VALUES ('Pedro Martins', DATE '1986-11-05', 'pedromartins86@gmail.com')
+    INTO Utentes (nome_utente, data_nasc_ut, email_ut)
+    VALUES ('Ines Ferreira', DATE '2001-03-17', 'inesferreira01@gmail.com')
+    INTO Utentes (nome_utente, data_nasc_ut, email_ut)
+    VALUES ('Ricardo Almeida', DATE '1978-09-29', 'ricardoalmeida78@gmail.com')
+    INTO Utentes (nome_utente, data_nasc_ut, email_ut)
+    VALUES ('Sofia Mendes', DATE '1995-12-12', 'sofiamendes95@gmail.com')
+    INTO Utentes (nome_utente, data_nasc_ut, email_ut)
+    VALUES ('Tiago Carvalho', DATE '1983-04-07', 'tiagocarvalho83@gmail.com')
+    INTO Utentes (nome_utente, data_nasc_ut, email_ut)
+    VALUES ('Beatriz Santos', DATE '1999-06-21', 'beatrizsantos99@gmail.com')
+    INTO Utentes (nome_utente, data_nasc_ut, email_ut)
+    VALUES ('Miguel Pereira', DATE '1969-12-03', 'miguelpereira69@gmail.com')
+    INTO Utentes (nome_utente, data_nasc_ut, email_ut)
+    VALUES ('Carolina Lopes', DATE '1988-01-26', 'carolinalopes88@gmail.com')
+SELECT 1 FROM dual;
 
 -- ============================================
 -- MEDICOS
 -- ============================================
 
-INSERT INTO Medicos (id_medico, nome_medico, data_nasc_med, email_med)
-VALUES
-	(1, 'Antonio Variacoes', 19660714, 'avariacoes66@gmail.com'),
-	(2, 'Helena Duarte', 19750328, 'helenaduarte75@gmail.com'),
-	(3, 'Bruno Teixeira', 19821016, 'brunoteixeira82@gmail.com'),
-	(4, 'Catarina Ribeiro', 19900409, 'catarinaribeiro90@gmail.com'),
-	(5, 'Daniel Monteiro', 19781122, 'danielmonteiro78@gmail.com');
+INSERT ALL
+    INTO Medicos (nome_medico, data_nasc_med, email_med)
+    VALUES ('Antonio Variacoes', DATE '1966-07-14', 'avariacoes66@gmail.com')
+    INTO Medicos (nome_medico, data_nasc_med, email_med)
+    VALUES ('Helena Duarte', DATE '1975-03-28', 'helenaduarte75@gmail.com')
+    INTO Medicos (nome_medico, data_nasc_med, email_med)
+    VALUES ('Bruno Teixeira', DATE '1982-10-16', 'brunoteixeira82@gmail.com')
+    INTO Medicos (nome_medico, data_nasc_med, email_med)
+    VALUES ('Catarina Ribeiro', DATE '1990-04-09', 'catarinaribeiro90@gmail.com')
+    INTO Medicos (nome_medico, data_nasc_med, email_med)
+    VALUES ('Daniel Monteiro', DATE '1978-11-22', 'danielmonteiro78@gmail.com')
+SELECT 1 FROM dual;
 
 -- ============================================
 -- CONSULTAS
 -- ============================================
 
-INSERT INTO Consultas
-(id_consulta, id_utente, id_medico, data_consulta, estado_consulta)
-VALUES
-    (1, 1, 1, 20260901, 'REALIZADA'),
-    (2, 2, 2, 20260902, 'REALIZADA'),
-    (3, 3, 3, 20260903, 'REALIZADA'),
-    (4, 4, 4, 20260904, 'CANCELADA'),
-    (5, 5, 5, 20260905, 'REALIZADA'),
-    (6, 1, 2, 20260906, 'REALIZADA'),
-    (7, 6, 3, 20260908, 'REALIZADA'),
-    (8, 7, 4, 20260909, 'AGENDADA'),
-    (9, 8, 5, 20260910, 'REALIZADA'),
-    (10, 9, 1, 20260911, 'REALIZADA'),
-    (11, 10, 2, 20260912, 'AGENDADA'),
-    (12, 2, 3, 20260913, 'REALIZADA'),
-    (13, 3, 4, 20260915, 'CANCELADA'),
-    (14, 5, 1, 20260916, 'REALIZADA'),
-    (15, 6, 5, 20260917, 'AGENDADA'),
-    (16, 7, 2, 20260918, 'REALIZADA'),
-    (17, 8, 3, 20260919, 'AGENDADA'),
-    (18, 9, 4, 20260920, 'REALIZADA'),
-    (19, 10, 5, 20260921, 'AGENDADA'),
-    (20, 1, 3, 20260922, 'AGENDADA'),
-    (21, 4, 1, 20260923, 'AGENDADA'),
-    (22, 5, 4, 20260924, 'AGENDADA'),
-    (23, 2, 5, 20260925, 'AGENDADA'),
-    (24, 6, 1, 20260926, 'AGENDADA'),
-    (25, 10, 2, 20260927, 'AGENDADA');
-
+INSERT ALL
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (1, 1, DATE '2026-09-01', 'REALIZADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (2, 2, DATE '2026-09-02', 'REALIZADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (3, 3, DATE '2026-09-03', 'REALIZADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (4, 4, DATE '2026-09-04', 'CANCELADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (5, 5, DATE '2026-09-05', 'REALIZADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (1, 2, DATE '2026-09-06', 'REALIZADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (6, 3, DATE '2026-09-08', 'REALIZADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (7, 4, DATE '2026-09-09', 'AGENDADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (8, 5, DATE '2026-09-10', 'REALIZADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (9, 1, DATE '2026-09-11', 'REALIZADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (10, 2, DATE '2026-09-12', 'AGENDADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (2, 3, DATE '2026-09-13', 'REALIZADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (3, 4, DATE '2026-09-15', 'CANCELADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (5, 1, DATE '2026-09-16', 'REALIZADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (6, 5, DATE '2026-09-17', 'AGENDADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (7, 2, DATE '2026-09-18', 'REALIZADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (8, 3, DATE '2026-09-19', 'AGENDADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (9, 4, DATE '2026-09-20', 'REALIZADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (10, 5, DATE '2026-09-21', 'AGENDADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (1, 3, DATE '2026-09-22', 'AGENDADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (4, 1, DATE '2026-09-23', 'AGENDADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (5, 4, DATE '2026-09-24', 'AGENDADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (2, 5, DATE '2026-09-25', 'AGENDADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (6, 1, DATE '2026-09-26', 'AGENDADA')
+    INTO Consultas (id_utente, id_medico, data_consulta, estado_consulta)
+    VALUES (10, 2, DATE '2026-09-27', 'AGENDADA')
+SELECT 1 FROM dual;
 
 -- ============================================
 -- PRESCRICOES
 -- ============================================
 
-INSERT INTO Prescricoes
-(id_presc, nome_presc, data_presc, id_consulta, presc_estado)
-VALUES
-    (1, 'Paracetamol', 20260901, 1, 'ATIVA'),
-    (2, 'Ibuprofeno', 20260902, 2, 'ATIVA'),
-    (3, 'Amoxicilina', 20260903, 3, 'ATIVA'),
-    (4, 'Omeprazol', 20260905, 5, 'ATIVA'),
-    (5, 'Metformina', 20260906, 6, 'ATIVA'),
-    (6, 'Paracetamol', 20260908, 7, 'ATIVA'),
-    (7, 'Cetirizina', 20260910, 9, 'ATIVA'),
-    (8, 'Atorvastatina', 20260911, 10, 'ATIVA'),
-    (9, 'Ibuprofeno', 20260913, 12, 'SUSPENSA'),
-    (10, 'Amoxicilina', 20260916, 14, 'ATIVA'),
-    (11, 'Omeprazol', 20260918, 16, 'ATIVA'),
-    (12, 'Paracetamol', 20260920, 18, 'ATIVA'),
-    (13, 'Metformina', 20260920, 18, 'ATIVA'),
-    (14, 'Cetirizina', 20260920, 18, 'SUSPENSA'),
-    (15, 'Atorvastatina', 20260920, 18, 'ATIVA');
+INSERT ALL
+    INTO Prescricoes (nome_presc, data_presc, id_consulta, presc_estado)
+    VALUES ('Paracetamol', DATE '2026-09-01', 1, 'ATIVA')
+    INTO Prescricoes (nome_presc, data_presc, id_consulta, presc_estado)
+    VALUES ('Ibuprofeno', DATE '2026-09-02', 2, 'ATIVA')
+    INTO Prescricoes (nome_presc, data_presc, id_consulta, presc_estado)
+    VALUES ('Amoxicilina', DATE '2026-09-03', 3, 'ATIVA')
+    INTO Prescricoes (nome_presc, data_presc, id_consulta, presc_estado)
+    VALUES ('Omeprazol', DATE '2026-09-05', 5, 'ATIVA')
+    INTO Prescricoes (nome_presc, data_presc, id_consulta, presc_estado)
+    VALUES ('Metformina', DATE '2026-09-06', 6, 'ATIVA')
+    INTO Prescricoes (nome_presc, data_presc, id_consulta, presc_estado)
+    VALUES ('Paracetamol', DATE '2026-09-08', 7, 'ATIVA')
+    INTO Prescricoes (nome_presc, data_presc, id_consulta, presc_estado)
+    VALUES ('Cetirizina', DATE '2026-09-10', 9, 'ATIVA')
+    INTO Prescricoes (nome_presc, data_presc, id_consulta, presc_estado)
+    VALUES ('Atorvastatina', DATE '2026-09-11', 10, 'ATIVA')
+    INTO Prescricoes (nome_presc, data_presc, id_consulta, presc_estado)
+    VALUES ('Ibuprofeno', DATE '2026-09-13', 12, 'SUSPENSA')
+    INTO Prescricoes (nome_presc, data_presc, id_consulta, presc_estado)
+    VALUES ('Amoxicilina', DATE '2026-09-16', 14, 'ATIVA')
+    INTO Prescricoes (nome_presc, data_presc, id_consulta, presc_estado)
+    VALUES ('Omeprazol', DATE '2026-09-18', 16, 'ATIVA')
+    INTO Prescricoes (nome_presc, data_presc, id_consulta, presc_estado)
+    VALUES ('Paracetamol', DATE '2026-09-20', 18, 'ATIVA')
+    INTO Prescricoes (nome_presc, data_presc, id_consulta, presc_estado)
+    VALUES ('Metformina', DATE '2026-09-20', 18, 'ATIVA')
+    INTO Prescricoes (nome_presc, data_presc, id_consulta, presc_estado)
+    VALUES ('Cetirizina', DATE '2026-09-20', 18, 'SUSPENSA')
+    INTO Prescricoes (nome_presc, data_presc, id_consulta, presc_estado)
+    VALUES ('Atorvastatina', DATE '2026-09-20', 18, 'ATIVA')
+SELECT 1 FROM dual;
