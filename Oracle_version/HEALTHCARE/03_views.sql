@@ -1,6 +1,10 @@
--- Views
+-- Views and Indexes
 
 -- 1) Scheduled_Appointments	JOINs + filtros
+CREATE INDEX idx_state_appointment
+ON Appointment(state_appointment);
+
+CREATE VIEW Scheduled_Appointments AS
 SELECT P.name_patient, D.name_doctor, A.date_appointment
 FROM
     Appointments A JOIN Patients P ON A.id_patient = P.id_patient
@@ -8,11 +12,19 @@ FROM
 WHERE A.state_appointment = "AGENDADA";
 
 -- 2) Patient_Appointment_History	JOINs + ORDER BY
+CREATE INDEX idx_name_patient
+ON Patients(name_patient);
+
+CREATE VIEW Patient_Appointment_History AS
 SELECT P.name_patient, A.date_appointment, A.state_appointment
 FROM Appointments A JOIN Patients P ON A.id_patient = P.id_patient
 ORDER BY P.name_patient;
 
 -- 3) Active_Prescriptions	JOINs + filtros
+CREATE INDEX idx_state_prescription
+ON Prescriptions(state_prescription);
+
+CREATE VIEW Active_Prescriptions AS
 SELECT P.name_patient, M.name_medication
 FROM
     Patients P JOIN Appointments A ON P.id_patient = A.id_patient
@@ -22,6 +34,10 @@ WHERE PR.state_prescription = "ACTIVE"
 ORDER BY P.name_patient;
 
 -- 4) Doctor_Specialties
+CREATE INDEX idx_name_doctor
+ON Doctors(name_doctor);
+
+CREATE VIEW Doctor_Specialties AS
 SELECT D.name_doctor, S.name_specialty
 FROM
     Doctors D JOIN Doctor_Specialty DS ON D.id_doctor = DS.id_doctor
@@ -29,6 +45,7 @@ FROM
 ORDER BY D.name_doctor;
 
 -- 5) Doctor_Revenue	GROUP BY + SUM + COUNT
-SELECT
-FROM
-WHERE;
+CREATE VIEW Doctor_Revenue AS
+SELECT D.name_doctor, SUM(A.payment) as total_revenue
+FROM Doctors D JOIN Appointments A ON D.id_doctor = A.id_doctor
+GROUP BY D.name_doctor;
