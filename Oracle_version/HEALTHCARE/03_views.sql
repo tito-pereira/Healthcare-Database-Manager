@@ -1,52 +1,34 @@
-DROP INDEX idx_estado_consulta;
-CREATE INDEX idx_estado_consulta
-on Consultas(estado_consulta);
+-- Views
 
-DROP VIEW "Consultas Agendadas";
-CREATE VIEW "Consultas Agendadas" as
-SELECT *
-FROM Consultas C
-WHERE C.estado_consulta = "AGENDADA";
+-- 1) Scheduled_Appointments	JOINs + filtros
+SELECT P.name_patient, D.name_doctor, A.date_appointment
+FROM
+    Appointments A JOIN Patients P ON A.id_patient = P.id_patient
+    JOIN Doctors D ON id_doctor = D.id_doctor
+WHERE A.state_appointment = "AGENDADA";
 
----------------
----------------
+-- 2) Patient_Appointment_History	JOINs + ORDER BY
+SELECT P.name_patient, A.date_appointment, A.state_appointment
+FROM Appointments A JOIN Patients P ON A.id_patient = P.id_patient
+ORDER BY P.name_patient;
 
-DROP INDEX "idx_id_medico_C";
-CREATE INDEX idx_id_medico_C
-on Consultas(id_medico);
-DROP INDEX "idx_id_medico_M";
-CREATE INDEX idx_id_medico_M
-on Medicos (id_medico);
+-- 3) Active_Prescriptions	JOINs + filtros
+SELECT P.name_patient, M.name_medication
+FROM
+    Patients P JOIN Appointments A ON P.id_patient = A.id_patient
+    JOIN Prescriptions PR ON A.id_appointment = PR.id_appointment
+    JOIN Medication M ON PR.id_medication = M.id_medication
+WHERE PR.state_prescription = "ACTIVE"
+ORDER BY P.name_patient;
 
-DROP VIEW "Todas as Consultas Por Medico";
-CREATE VIEW "Todas as Consultas Por Medico" as
-SELECT M.nome_medico, C.id_consulta, C.estado_consulta
-FROM Consultas C JOIN Medicos M
-WHERE C.id_medico = M.id_medico
-ORDER by M.nome_medico;
+-- 4) Doctor_Specialties
+SELECT D.name_doctor, S.name_specialty
+FROM
+    Doctors D JOIN Doctor_Specialty DS ON D.id_doctor = DS.id_doctor
+    JOIN Specialty S ON DS.id_specialty = S.id_specialty
+ORDER BY D.name_doctor;
 
----------------
----------------
-
-DROP INDEX "idx_presc_estado";
-CREATE INDEX idx_presc_estado
-on Prescricoes(presc_estado);
-
-DROP VIEW "Prescricoes Ativas";
-CREATE VIEW "Prescricoes Ativas" as
-SELECT *
-FROM Prescricoes P
-WHERE P.presc_estado = "Ativa";
-
----------------
----------------
-
-DROP INDEX "idx_nome_utente";
-CREATE INDEX idx_nome_utente
-on Utentes(nome_utente);
-
-DROP VIEW "Prescricoes Por Utente";
-CREATE VIEW "Prescricoes Por Utente" as
-SELECT U.nome_utente, P.nome_presc, P.presc_estado, P.data_presc
-FROM Prescricoes P JOIN Consultas C on P.id_consulta = C.id_consulta JOIN Utentes U on C.id_utente = U.id_utente
-ORDER by U.nome_utente;
+-- 5) Doctor_Revenue	GROUP BY + SUM + COUNT
+SELECT
+FROM
+WHERE;

@@ -1,0 +1,6 @@
+-- Procedures
+-- schedule_appointment	Criar consulta
+-- complete_appointment	Completar consulta + pagamento
+-- cancel_appointment	Cancelar consulta
+-- create_prescription	Criar prescrição
+-- suspend_prescription	Suspender prescrição
