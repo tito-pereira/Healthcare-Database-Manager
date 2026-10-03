@@ -25,5 +25,5 @@ DROP INDEX idx_name_doctor;
 DROP VIEW Scheduled_Appointments CASCADE CONSTRAINTS;
 DROP VIEW Patient_Appointment_History CASCADE CONSTRAINTS;
 DROP VIEW Active_Prescriptions CASCADE CONSTRAINTS;
--- DROP VIEW Doctor_Specialties CASCADE CONSTRAINTS;
+DROP VIEW Doctor_Specialties CASCADE CONSTRAINTS;
 -- DROP VIEW Doctor_Revenue CASCADE CONSTRAINTS;
