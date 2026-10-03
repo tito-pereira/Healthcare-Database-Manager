@@ -1,13 +1,23 @@
 -- DROP scripts for tables, views and indexes for testing purposes
 -- Highlight and click "Run Statement" or Ctrl+Enter
 
-DROP TABLE Patients CASCADE CONSTRAINTS;
-DROP TABLE Specialty CASCADE CONSTRAINTS;
-DROP TABLE Doctors CASCADE CONSTRAINTS;
-DROP TABLE Doctor_Specialty CASCADE CONSTRAINTS;
-DROP TABLE Appointments CASCADE CONSTRAINTS;
-DROP TABLE Medication CASCADE CONSTRAINTS;
-DROP TABLE Prescriptions CASCADE CONSTRAINTS;
-DROP TABLE Prescription_History CASCADE CONSTRAINTS;
-DROP TABLE Appointment_History CASCADE CONSTRAINTS;
+
+SELECT * 
+FROM Appointment_History;
+SELECT *
+FROM Prescription_History;
+SELECT *
+FROM Prescriptions; 
+SELECT *
+FROM Appointments;
+SELECT *
+FROM Doctor_Specialty;
+SELECT *
+FROM Medication; 
+SELECT *
+FROM Doctors;
+SELECT *
+FROM Patients;
+SELECT *
+FROM Specialty;
 
