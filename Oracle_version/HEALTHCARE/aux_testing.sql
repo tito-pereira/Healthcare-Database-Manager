@@ -16,7 +16,7 @@ SELECT * FROM Specialty;
 -- Show all Views:
 
 SELECT * FROM Scheduled_Appointments;
-SELECT * FROM Patient_Appointment_History
+SELECT * FROM Patient_Appointment_History;
 SELECT * FROM Active_Prescriptions;
-SELECT * FROM Doctor_Specialties;
-SELECT * FROM Doctor_Revenue;
+-- SELECT * FROM Doctor_Specialties;
+-- SELECT * FROM Doctor_Revenue;

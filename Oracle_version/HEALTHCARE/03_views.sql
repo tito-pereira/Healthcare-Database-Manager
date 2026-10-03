@@ -1,17 +1,17 @@
 -- Views and Indexes
 
--- 1) Scheduled_Appointments	JOINs + filtros
+-- 1) Scheduled_Appointments	(V)
 CREATE INDEX idx_state_appointment
-ON Appointment(state_appointment);
+ON Appointments(state_appointment);
 
 CREATE VIEW Scheduled_Appointments AS
 SELECT P.name_patient, D.name_doctor, A.date_appointment
 FROM
     Appointments A JOIN Patients P ON A.id_patient = P.id_patient
-    JOIN Doctors D ON id_doctor = D.id_doctor
-WHERE A.state_appointment = "AGENDADA";
+    JOIN Doctors D ON A.id_doctor = D.id_doctor
+WHERE A.state_appointment = 'SCHEDULED';
 
--- 2) Patient_Appointment_History	JOINs + ORDER BY
+-- 2) Patient_Appointment_History	(V)
 CREATE INDEX idx_name_patient
 ON Patients(name_patient);
 
@@ -20,9 +20,9 @@ SELECT P.name_patient, A.date_appointment, A.state_appointment
 FROM Appointments A JOIN Patients P ON A.id_patient = P.id_patient
 ORDER BY P.name_patient;
 
--- 3) Active_Prescriptions	JOINs + filtros
-CREATE INDEX idx_state_prescription
-ON Prescriptions(state_prescription);
+-- 3) Active_Prescriptions	(V)
+CREATE INDEX idx_state_presc
+ON Prescriptions(state_presc);
 
 CREATE VIEW Active_Prescriptions AS
 SELECT P.name_patient, M.name_medication
@@ -30,7 +30,7 @@ FROM
     Patients P JOIN Appointments A ON P.id_patient = A.id_patient
     JOIN Prescriptions PR ON A.id_appointment = PR.id_appointment
     JOIN Medication M ON PR.id_medication = M.id_medication
-WHERE PR.state_prescription = "ACTIVE"
+WHERE PR.state_presc = 'ACTIVE'
 ORDER BY P.name_patient;
 
 -- 4) Doctor_Specialties
