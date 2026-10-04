@@ -1,6 +1,6 @@
 -- Views and Indexes
 
--- 1) Scheduled_Appointments	(V)
+-- 1) Scheduled_Appointments
 CREATE INDEX idx_state_appointment
 ON Appointments(state_appointment);
 
@@ -11,7 +11,7 @@ FROM
     JOIN Doctors D ON A.id_doctor = D.id_doctor
 WHERE A.state_appointment = 'SCHEDULED';
 
--- 2) Patient_Appointment_History	(V)
+-- 2) Patient_Appointment_History
 CREATE INDEX idx_name_patient
 ON Patients(name_patient);
 
@@ -20,7 +20,7 @@ SELECT P.name_patient, A.date_appointment, A.state_appointment
 FROM Appointments A JOIN Patients P ON A.id_patient = P.id_patient
 ORDER BY P.name_patient;
 
--- 3) Active_Prescriptions	(V)
+-- 3) Active_Prescriptions
 CREATE INDEX idx_state_presc
 ON Prescriptions(state_presc);
 
@@ -44,8 +44,10 @@ FROM
     JOIN Specialty S ON DS.id_specialty = S.id_specialty
 ORDER BY D.name_doctor;
 
--- 5) Doctor_Revenue	GROUP BY + SUM + COUNT
+-- 5) Doctor_Revenue
 CREATE VIEW Doctor_Revenue AS
-SELECT D.name_doctor, SUM(A.payment) as total_revenue
+SELECT D.name_doctor, SUM(A.payment) as total_revenue,
+    AVG(A.payment) as average_revenue
 FROM Doctors D JOIN Appointments A ON D.id_doctor = A.id_doctor
-GROUP BY D.name_doctor;
+GROUP BY D.name_doctor
+ORDER BY average_revenue DESC;
