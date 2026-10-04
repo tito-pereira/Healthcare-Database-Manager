@@ -10,11 +10,11 @@ For anyone wanting to test/change/play around with this database, you will need 
 2. 
 
 -> Oracle SQL Developer Version
-. Download, extract and setup the correct Oracle SQL Developer (Link)
-. Download and setup Oracle Space in (Link)
-. Set it up as FREEPDB1 and a password of your liking
-. Log into FREEPDB1 (not an xe) as user SYSTEM and the password you have chosen
-. Run 00_setup.sql as the SYSTEM user
-. Log into FREEPDB1 as the HEALTHCARE user
-. Run 01, 02, 03, etc.. (with F5)
+1. Download, extract and setup the correct Oracle SQL Developer (Link)
+2. Download and setup Oracle Space in (Link)
+3. Set it up as FREEPDB1 and a password of your liking
+4. Log into FREEPDB1 (not an xe) as user SYSTEM and the password you have chosen
+5. Run 00_setup.sql as the SYSTEM user
+6. Log into FREEPDB1 as the HEALTHCARE user
+7. Run 01, 02, 03, etc.. (with F5)
 (colocar as .png para demonstrar o modelo resultante + link do SQL to ER diagram)
