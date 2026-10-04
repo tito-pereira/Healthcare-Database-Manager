@@ -8,10 +8,15 @@ For anyone wanting to test/change/play around with this database, you will need 
 1. Download, extract and setup the appropriate SQLite version for your machine in the link below:
 (LINK)
 2. Download and extract this repository;
-3. Open SQLite, and run the scripts in this order:
+3. Open SQLite;
+4. Go into “Execute SQL”;
+5. Open all the files from “01_tables_sqlite.sql” up to “04_testing_sqlite.sql”;
+6. Click on “New Database” and name it whatever you want;
+7. Run the scripts in this order:
   - 01_tables_sqlite.sql
   - 02_seed_sqlite.sql
   - 03_views_sqlite.sql
+8. You can now view the database objects from “Database Structure”, the data from “Browse Data” and even try out the pre-made tests from 04_testing_sqlite.sql;
 
 -> Oracle SQL Developer Version
 1. Download, extract and setup the appropriate Oracle SQL Developer version for your machine in the link below:
