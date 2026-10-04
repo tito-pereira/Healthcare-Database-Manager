@@ -5,8 +5,7 @@ This is a personal project to simulate on a very simple level a working database
 For anyone wanting to test/change/play around with this database, you will need a certain setup of software in order to do so:
 
 -> SQLite Version
-1. Download, extract and setup the appropriate SQLite version for your machine in the link below:
-   [(here)](https://www.sqlite.org/download.html)
+1. Download, extract and setup the appropriate SQLite version for your machine in [this](https://www.sqlite.org/download.html) link;
 3. Download and extract this repository;
 4. Open SQLite;
 5. Go into “Execute SQL”;
