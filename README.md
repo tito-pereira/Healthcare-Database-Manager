@@ -6,7 +6,7 @@ For anyone wanting to test/change/play around with this database, you will need 
 
 -> SQLite Version
 1. Download, extract and setup the appropriate SQLite version for your machine in the link below:
-(LINK)
+[(LINK)](https://www.sqlite.org/download.html)
 2. Download and extract this repository;
 3. Open SQLite;
 4. Go into “Execute SQL”;
