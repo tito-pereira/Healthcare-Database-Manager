@@ -52,3 +52,17 @@ SELECT * FROM Patient_Appointment_History;
 SELECT * FROM Active_Prescriptions;
 SELECT * FROM Doctor_Specialties;
 SELECT * FROM Doctor_Revenue;
+
+--CREATE OR REPLACE PROCEDURE patient_mngmt (flag VARCHAR2,
+--    id_pat NUMBER, name_pat VARCHAR2, date_pat DATE, email_pat VARCHAR2)
+--AS
+--BEGIN
+--    IF flag=0 THEN
+--        deactv_patient(id_pat);
+--    ELSIF flag=1 THEN
+--        reactv_patient(name_pat, date_pat, email_pat);
+--    ELSIF flag=2 THEN
+--        new_patient(name_pat, date_pat, email_pat);
+--    END IF;
+--END;
+--/

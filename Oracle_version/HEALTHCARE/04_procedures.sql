@@ -14,7 +14,7 @@ BEGIN
 END;
 /
 
-CREATE OR REPLACE PROCEDURE deactv_patient (id_pat NUMBER)
+CREATE OR REPLACE PROCEDURE deactivate_patient (id_pat NUMBER)
 AS
 BEGIN
     UPDATE Patients P
@@ -23,7 +23,7 @@ BEGIN
 END;
 /
 
-CREATE OR REPLACE PROCEDURE reactv_patient (id_pat NUMBER)
+CREATE OR REPLACE PROCEDURE reactivate_patient (id_pat NUMBER)
 AS
 BEGIN
     UPDATE Patients P
@@ -31,27 +31,6 @@ BEGIN
     WHERE P.id_patient = id_pat;
 END;
 /
-
---SELECT * FROM Patients P ORDER BY P.name_patient;
---exec new_patient('Antoni Toni', DATE '1999-02-20', NULL);
---exec deactv_patient(11);
---exec reactv_patient(11);
---DELETE FROM Patients P WHERE P.id_patient = 11;
---rollback;
-
---CREATE OR REPLACE PROCEDURE patient_mngmt (flag VARCHAR2,
---    id_pat NUMBER, name_pat VARCHAR2, date_pat DATE, email_pat VARCHAR2)
---AS
---BEGIN
---    IF flag=0 THEN
---        deactv_patient(id_pat);
---    ELSIF flag=1 THEN
---        reactv_patient(name_pat, date_pat, email_pat);
---    ELSIF flag=2 THEN
---        new_patient(name_pat, date_pat, email_pat);
---    END IF;
---END;
---/
 
 --------------------------------------------------------------------------------
 -- 2) Doctor Management
@@ -67,7 +46,7 @@ BEGIN
 END;
 /
 
-CREATE OR REPLACE PROCEDURE deactv_doctor (id_doc NUMBER)
+CREATE OR REPLACE PROCEDURE deactivate_doctor (id_doc NUMBER)
 AS
 BEGIN
     UPDATE Doctors D
@@ -76,7 +55,7 @@ BEGIN
 END;
 /
 
-CREATE OR REPLACE PROCEDURE reactv_doctor (id_doc NUMBER)
+CREATE OR REPLACE PROCEDURE reactivate_doctor (id_doc NUMBER)
 AS
 BEGIN
     UPDATE Doctors D
@@ -84,13 +63,6 @@ BEGIN
     WHERE D.id_doctor = id_doc;
 END;
 /
-
---SELECT * FROM Doctors D ORDER BY D.name_doctor;
---exec new_doctor('Antoni Toni', DATE '1999-02-20', NULL);
---exec deactv_doctor(9);
---exec reactv_doctor(9);
---DELETE FROM Doctors D WHERE D.id_doctor = 9;
---rollback;
 
 --------------------------------------------------------------------------------
 -- 3) Appointment Management
@@ -105,7 +77,6 @@ BEGIN
      VALUES (id_pat, id_doc, dt_app, 'SCHEDULED', NULL);
 END;
 /
-
 
 CREATE OR REPLACE PROCEDURE complete_appointment (id_app NUMBER, pay NUMBER)
 AS
@@ -125,32 +96,25 @@ BEGIN
 END;
 /
 
---select * from Appointments A where A.state_appointment = 'SCHEDULED'
---order by A.date_appointment DESC;
---rollback;
---EXEC schedule_appointment(1, 1, date '2026-10-01');
---select *
---from Appointments A
---where A.state_appointment = 'SCHEDULED';
---select *
---from Appointments A
---where A.state_appointment = 'COMPLETED';
---EXEC complete_appointment(8, 70);
---rollback;
-
 --------------------------------------------------------------------------------
 -- 4) Prescription Management
--- ACTIVE / SUSPENDED
 --------------------------------------------------------------------------------
 
-CREATE OR REPLACE PROCEDURE create_prescription()
+CREATE OR REPLACE PROCEDURE create_prescription
+    (p_id NUMBER, p_med NUMBER, p_date DATE)
 AS
 BEGIN
     INSERT INTO Prescriptions
-    VALUES ();
+        (id_appointment, id_medication, date_presc, state_presc)
+    VALUES (p_id, p_med, p_date, 'ACTIVE');
 END;
+/
 
-CREATE OR REPLACE PROCEDURE suspend_prescription()
+CREATE OR REPLACE PROCEDURE suspend_prescription(id_presc NUMBER)
 AS
 BEGIN
+    UPDATE Prescriptions P
+    SET P.state_presc = 'SUSPENDED'
+    WHERE P.id_prescription = id_presc;
 END;
+/
