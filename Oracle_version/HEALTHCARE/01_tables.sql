@@ -2,7 +2,8 @@ CREATE TABLE Patients (
 	id_patient NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 	name_patient VARCHAR2(300) NOT NULL,
 	date_birth_pat DATE NOT NULL,
-	email_patient VARCHAR2(100)
+	email_patient VARCHAR2(100),
+    state_patient VARCHAR2(20)
 );
 
 CREATE TABLE Specialty (
@@ -14,7 +15,8 @@ CREATE TABLE Doctors (
 	id_doctor NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 	name_doctor VARCHAR2(300) NOT NULL,
 	date_birth_doc DATE NOT NULL,
-	email_doc VARCHAR2(100)
+	email_doctor VARCHAR2(100),
+    state_doctor VARCHAR2(20)
 );
 
 CREATE TABLE Doctor_Specialty (
