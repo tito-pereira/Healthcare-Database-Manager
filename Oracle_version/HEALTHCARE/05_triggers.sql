@@ -1,13 +1,13 @@
 -- Triggers
 
---CREATE OR REPLACE TRIGGER nome_trigger
---BEFORE | AFTER
---INSERT | UPDATE | DELETE
---ON nome_tabela
---FOR EACH ROW
---BEGIN
+-- CREATE OR REPLACE TRIGGER nome_trigger
+-- BEFORE | AFTER
+-- INSERT | UPDATE | DELETE
+-- ON nome_tabela
+-- FOR EACH ROW
+-- BEGIN
      -- código
---END;
+-- END;
 
 -- 1) trg_prescription_history	Registar alterações de prescrição
 -- 2) trg_appointment_history	Registar alterações de consulta

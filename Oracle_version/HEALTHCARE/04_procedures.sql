@@ -1,7 +1,72 @@
 -- Procedures
 
 --------------------------
--- 1) schedule_appointment
+-- 1) patient_management
+--------------------------
+
+-- testar ???
+-- triggers de remover e adicionar no histórico?
+SELECT *
+FROM Patients P
+ORDER BY P.name_patient;
+rollback;
+exec new_patient('Toni Toni', DATE '1999-02-20', NULL);
+exec rmv_patient(11);
+
+CREATE OR REPLACE PROCEDURE new_patient
+    (name_pat VARCHAR2, date_pat DATE, email_pat VARCHAR2)
+AS
+BEGIN
+    INSERT INTO Patients (name_patient, date_birth_pat, email_patient)
+    VALUES (name_pat, date_pat, email_pat);
+END;
+/
+
+CREATE OR REPLACE PROCEDURE rmv_patient (id_pat NUMBER)
+AS
+BEGIN
+    DELETE FROM Patients P
+    WHERE P.id_patient = id_pat;
+END;
+/
+
+CREATE OR REPLACE PROCEDURE patient_mngmt (flag VARCHAR2,
+    id_pat NUMBER, name_pat VARCHAR2, date_pat DATE, email_pat VARCHAR2)
+AS
+BEGIN
+    IF flag=0 THEN
+        rmv_patient(id_pat);
+    ELSIF flag=1 THEN
+        new_patient(name_pat, date_pat, email_pat);
+    END IF;
+END;
+/
+
+--------------------------
+-- 2) doctor__management
+--------------------------
+
+-- testar ???
+
+CREATE OR REPLACE PROCEDURE new_doctor
+    (name_doc VARCHAR2, date_doc DATE, email_doc VARCHAR2)
+AS
+BEGIN
+    INSERT INTO Doctors (name_doctor, date_birth_doc, email_doc)
+    VALUES (name_doc, date_doc, email_doc);
+END;
+/
+
+CREATE OR REPLACE PROCEDURE rmv_doctor (id_doc NUMBER)
+AS
+BEGIN
+    DELETE FROM Doctors D
+    WHERE D.id_doctor = id_doc;
+END;
+/
+
+--------------------------
+-- 3) schedule_appointment
 --------------------------
 
 --select *
@@ -22,7 +87,7 @@ END;
 /
 
 --------------------------
--- 2) complete_appointment	Completar consulta + pagamento
+-- 4) complete_appointment
 --------------------------
 
 --select *
@@ -43,9 +108,11 @@ BEGIN
 END;
 /
 
--- 3) cancel_appointment	Cancelar consulta
+--------------------------
+-- 5) complete_appointment
+--------------------------
 
--- testar
+-- testar ???
 
 CREATE OR REPLACE PROCEDURE complete_appointment (id_app NUMBER)
 AS
@@ -56,5 +123,12 @@ BEGIN
 END;
 /
 
--- 4) create_prescription	Criar prescrição
--- 5) suspend_prescription	Suspender prescrição
+-- 6) create_prescription	Criar prescrição
+
+CREATE OR REPLACE PROCEDURE create_prescription()
+AS
+BEGIN
+    INSERT INTO Prescriptions
+    VALUES ();
+END;
+-- 7) suspend_prescription	Suspender prescrição
