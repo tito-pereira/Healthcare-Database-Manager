@@ -4,6 +4,12 @@ A personal project that simulates, on a simple level, a working database for a f
 
 The project focuses on **relational database design, SQL, SQLite and Oracle**, including tables, relationships, constraints, views, indexes, procedures and triggers.
 
+# 🎯 Purpose
+
+This project was created as a hands-on learning project to deepen my understanding of relational databases and Oracle, while building something that can be expanded with additional functionality over time.
+
+It also serves as a practical demonstration of database concepts applied to a realistic, although simplified, business scenario.
+
 ---
 
 ## 📌 Project Overview
@@ -109,7 +115,21 @@ The file `04_testing_sqlite.sql` contains pre-made queries to test the database.
 
 # 🏢 Oracle Version
 
-🚧 **Setup instructions coming soon**
+### Requirements
+
+You will need:
+
+* Oracle SQL Developer
+* Oracle Free Space ???
+* This repository
+
+### ⚙️ Setup
+
+*
+
+---
+
+# 🧩 Database Structure
 
 The Oracle version uses the same relational model as the SQLite version, with additional Oracle-specific functionality such as:
 
@@ -118,10 +138,6 @@ The Oracle version uses the same relational model as the SQLite version, with ad
 * Oracle Identity Columns
 * Oracle-specific data types
 * Oracle SQL Developer
-
----
-
-# 🧩 Database Structure
 
 ```text
 Patients ────────────< Appointments >──────────── Doctors
@@ -189,12 +205,4 @@ Prescriptions ───────> Prescription_History
 * Stored Procedures
 * Triggers
 * History / audit tables
-
----
-
-# 🎯 Purpose
-
-This project was created as a hands-on learning project to deepen my understanding of relational databases and Oracle, while building something that can be expanded with additional functionality over time.
-
-It also serves as a practical demonstration of database concepts applied to a realistic, although simplified, business scenario.
 
