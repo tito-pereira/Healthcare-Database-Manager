@@ -9,22 +9,59 @@
      -- código
 -- END;
 
--- 1) trg_prescription_history	Registar alterações de prescrição
+--------------------------------------------------------------------------------
+-- 1) Prescription History Triggers
 -- (id_prescription, old_state_presc, new_state_presc)
+--------------------------------------------------------------------------------
 
-CREATE OR REPLACE TRIGGER trig_prescription
+CREATE OR REPLACE TRIGGER trig_new_prescription
 AFTER INSERT ON Prescriptions
 FOR EACH ROW
 BEGIN
-    INSERT INTO Prescription_History
-        (id_prescription, old_state_presc, new_state_presc)
-    VALUES ();
+    IF :NEW.state_presc='ACTIVE' THEN
+        INSERT INTO Prescription_History
+            (id_prescription, old_state_presc, new_state_presc)
+        VALUES (:NEW.id_prescription, NULL, :NEW.state_presc);
+    END IF;
 END;
+/
+
+CREATE OR REPLACE TRIGGER trig_susp_prescription
+AFTER UPDATE ON Prescriptions
+FOR EACH ROW
+BEGIN
+    IF :NEW.state_presc='SUSPENDED' THEN
+        INSERT INTO Prescription_History
+            (id_prescription, old_state_presc, new_state_presc)
+        VALUES (:NEW.id_prescription, :OLD.state_presc, :NEW.state_presc);
+    END IF;
+END;
+/
 
 -- fazer NULL o old state, e alterar a seed
 
--- 2) trg_appointment_history	Registar alterações de consulta
+--------------------------------------------------------------------------------
+-- 2) Appointment History Triggers
 -- (id_appointment, old_state_appoint, new_state_appoint)
+--------------------------------------------------------------------------------
+
+CREATE OR REPLACE TRIGGER trig_new_appointment
+AFTER INSERT ON Appointments
+FOR EACH ROW
+BEGIN
+    IF THEN
+    END IF;
+END;
+/
+
+CREATE OR REPLACE TRIGGER trig_end_appointment
+AFTER UPDATE ON Appointments
+FOR EACH ROW
+BEGIN
+    IF THEN
+    END IF;
+END;
+/
 
 -- 3) trg_appointment_payment	Validar pagamento/estado
 
