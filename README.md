@@ -4,8 +4,6 @@ A personal project that simulates, on a simple level, a working database for a f
 
 The project focuses on **relational database design, SQL, SQLite and Oracle**, including tables, relationships, constraints, views, indexes, procedures and triggers.
 
-# 🎯 Purpose
-
 This project was created as a hands-on learning project to deepen my understanding of relational databases and Oracle, while building something that can be expanded with additional functionality over time.
 
 It also serves as a practical demonstration of database concepts applied to a realistic, although simplified, business scenario.
