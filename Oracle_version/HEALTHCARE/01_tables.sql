@@ -30,8 +30,8 @@ CREATE TABLE Appointments (
 	id_patient NUMBER NOT NULL REFERENCES Patients(id_patient),
 	id_doctor NUMBER NOT NULL REFERENCES Doctors(id_doctor),
 	date_appointment DATE NOT NULL,
-	state_appointment VARCHAR2(20) NOT NULL,
-  payment NUMBER(8,2)
+	state_appointment VARCHAR2(20),
+    payment NUMBER(8,2)
 );
 
 CREATE TABLE Medication (
@@ -44,19 +44,19 @@ CREATE TABLE Prescriptions (
     id_appointment NUMBER NOT NULL REFERENCES Appointments(id_appointment),
     id_medication NUMBER NOT NULL REFERENCES Medication(id_medication),
     date_presc DATE NOT NULL,
-    state_presc VARCHAR2(20) NOT NULL
+    state_presc VARCHAR2(20)
 );
 
 CREATE TABLE Prescription_History (
     id_presc_history NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_prescription NUMBER NOT NULL REFERENCES Prescriptions(id_prescription),
-    old_state_presc VARCHAR2(20) NOT NULL,
+    old_state_presc VARCHAR2(20),
     new_state_presc VARCHAR2(20) NOT NULL
 );
 
 CREATE TABLE Appointment_History (
     id_appoint_history NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_appointment NUMBER NOT NULL REFERENCES Appointments(id_appointment),
-    old_state_appoint VARCHAR2(20) NOT NULL,
+    old_state_appoint VARCHAR2(20),
     new_state_appoint VARCHAR2(20) NOT NULL
 );

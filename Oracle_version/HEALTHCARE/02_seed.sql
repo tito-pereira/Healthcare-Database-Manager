@@ -440,7 +440,77 @@ VALUES
 INSERT INTO Prescription_History
     (id_prescription, old_state_presc, new_state_presc)
 VALUES
+    (1, NULL, 'ACTIVE');
+
+INSERT INTO Prescription_History
+    (id_prescription, old_state_presc, new_state_presc)
+VALUES
+    (2, NULL, 'ACTIVE');
+
+INSERT INTO Prescription_History
+    (id_prescription, old_state_presc, new_state_presc)
+VALUES
+    (3, NULL, 'ACTIVE');
+
+INSERT INTO Prescription_History
+    (id_prescription, old_state_presc, new_state_presc)
+VALUES
+    (4, NULL, 'ACTIVE');
+
+INSERT INTO Prescription_History
+    (id_prescription, old_state_presc, new_state_presc)
+VALUES
+    (5, NULL, 'ACTIVE');
+
+INSERT INTO Prescription_History
+    (id_prescription, old_state_presc, new_state_presc)
+VALUES
+    (6, NULL, 'ACTIVE');
+
+INSERT INTO Prescription_History
+    (id_prescription, old_state_presc, new_state_presc)
+VALUES
+    (7, NULL, 'ACTIVE');
+
+INSERT INTO Prescription_History
+    (id_prescription, old_state_presc, new_state_presc)
+VALUES
+    (8, NULL, 'ACTIVE');
+
+INSERT INTO Prescription_History
+    (id_prescription, old_state_presc, new_state_presc)
+VALUES
+    (9, NULL, 'ACTIVE');
+
+INSERT INTO Prescription_History
+    (id_prescription, old_state_presc, new_state_presc)
+VALUES
     (9, 'ACTIVE', 'SUSPENDED');
+
+INSERT INTO Prescription_History
+    (id_prescription, old_state_presc, new_state_presc)
+VALUES
+    (10, NULL, 'ACTIVE');
+
+INSERT INTO Prescription_History
+    (id_prescription, old_state_presc, new_state_presc)
+VALUES
+    (11, NULL, 'ACTIVE');
+
+INSERT INTO Prescription_History
+    (id_prescription, old_state_presc, new_state_presc)
+VALUES
+    (12, NULL, 'ACTIVE');
+
+INSERT INTO Prescription_History
+    (id_prescription, old_state_presc, new_state_presc)
+VALUES
+    (13, NULL, 'ACTIVE');
+
+INSERT INTO Prescription_History
+    (id_prescription, old_state_presc, new_state_presc)
+VALUES
+    (14, NULL, 'ACTIVE');
 
 INSERT INTO Prescription_History
     (id_prescription, old_state_presc, new_state_presc)
@@ -450,8 +520,7 @@ VALUES
 INSERT INTO Prescription_History
     (id_prescription, old_state_presc, new_state_presc)
 VALUES
-    (14, 'SUSPENDED', 'ACTIVE');
-
+    (15, NULL, 'ACTIVE');
 
 -- ============================================
 -- APPOINTMENT HISTORY
