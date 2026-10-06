@@ -123,7 +123,68 @@ You will need:
 
 ### ⚙️ Setup
 
-*
+**1. Download Oracle SQL Developer**
+
+Download, extract and set up the appropriate Oracle SQL Developer version for your machine from the official SQLite website:
+
+👉 (LINK)
+
+**2. Download Oracle SQL Developer**
+
+Download, extract and set up the appropriate Oracle Database version for your machine from the official SQLite website:
+
+👉 (LINK)
+
+**3. Download and extract this repository**
+
+```bash
+git clone git@github.com:tito-pereira/Healthcare-Database-Manager.git
+cd Healthcare-Database-Manager
+```
+
+**3. Download and extract this repository**
+
+Set up Oracle Database using FREEPDB1 as the Pluggable Database (PDB) and choose a password of your liking;
+
+**4. Download and extract this repository**
+
+Log into FREEPDB1 as user SYSTEM, using the password you have chosen.
+Make sure to select "Service Name" rather than "SID", with FREEPDB1 as the service name;
+
+**5. Edit the setup script**
+
+Edit 00_setup.sql to choose the password for the HEALTHCARE user. Change the password on the line that says:
+
+´´´text
+CREATE USER HEALTHCARE
+IDENTIFIED BY "Your_Password";
+´´´
+
+Run 00_setup.sql while logged in as the SYSTEM user;
+
+
+Log into FREEPDB1 as the HEALTHCARE user, using the password you chose in 00_setup.sql. Again, select "Service Name" and use FREEPDB1;
+
+
+Run the scripts in the following order:
+```text
+01_tables_sqlite.sql
+        ↓
+02_seed_sqlite.sql
+        ↓
+03_views_sqlite.sql
+        ↓
+04_testing_sqlite.sql
+```
+* 01_tables_oracle.sql
+* 02_seed_oracle.sql
+* 03_views_oracle.sql
+* 04_procedures_oracle.sql
+* 05_triggers_oracle.sql
+
+Your Healthcare Database Manager Oracle database is now ready to use. You can explore the tables, data, views, procedures and triggers through Oracle SQL Developer.
+
+> ⚠️ The order is important because later scripts depend on objects created by the previous ones.
 
 ---
 
