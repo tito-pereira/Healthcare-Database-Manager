@@ -127,7 +127,7 @@ You will need:
 
 Download, extract and set up the appropriate Oracle SQL Developer version for your machine from the official SQLite website:
 
-👉 [https://www.oracle.com/database/sqldeveloper/](https://www.oracle.com/database/sqldeveloper/)
+👉 [https://www.oracle.com/database/sqldeveloper](https://www.oracle.com/database/sqldeveloper)
 
 **2. Download Oracle SQL Developer**
 
