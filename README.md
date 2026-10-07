@@ -22,7 +22,20 @@ The database manages:
 * 📋 Prescriptions
 * 🔄 Appointment & prescription history
 
-The project is implemented in **both SQLite and Oracle**, using the same underlying relational model while taking advantage of database-specific features where appropriate.
+The project is implemented in **both SQLite and Oracle**, using the same underlying relational model, while taking advantage of database-specific features where appropriate.
+
+The relational model is already fully normalized up to 3NF.
+
+The Oracle version uses the same relational model as the SQLite version, only with different variable names and additional Oracle-specific functionality such as:
+
+* Stored Procedures
+* Triggers
+* Oracle Identity Columns
+* Oracle-specific data types
+
+### Database ER Diagram
+
+![ER Model Diagram for both SQLite and Oracle](ER_Diagram.png)
 
 ---
 
@@ -200,46 +213,16 @@ Your Healthcare Database Manager Oracle database is now ready to use. You can ex
 
 ---
 
-# 🧩 Database Structure
-
-The Oracle version uses the same relational model as the SQLite version, with additional Oracle-specific functionality such as:
-
-* Stored Procedures
-* Triggers
-* Oracle Identity Columns
-* Oracle-specific data types
-* Oracle SQL Developer
-
-```text
-Patients ────────────< Appointments >──────────── Doctors
-                          │                         │
-                          │                         │
-                          │                    Doctor_Specialty
-                          │                         │
-                          │                         ▼
-                          │                     Specialty
-                          │
-                          ▼
-                    Prescriptions
-                          │
-                          ▼
-                      Medication
-
-Appointments ────────> Appointment_History
-Prescriptions ───────> Prescription_History
-```
-
----
-
 # 🛠️ Technologies
 
-| Technology    | Purpose                            |
-| ------------- | ---------------------------------- |
-| SQL           | Database querying and manipulation |
-| SQLite        | Lightweight relational database    |
-| Oracle        | Enterprise relational database     |
-| SQL Developer | Oracle database management         |
-| Git / GitHub  | Version control                    |
+| Technology         | Purpose                            |
+| -------------      | ---------------------------------- |
+| SQL                | Database querying and manipulation |
+| SQLite             | Lightweight relational database    |
+| Oracle             | Enterprise relational database     |
+| SQL Developer      | Oracle database management         |
+| Git / GitHub       | Version control                    |
+| SQL to ER Diagram  | Diagram Visualization              |
 
 ---
 
