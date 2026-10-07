@@ -118,7 +118,7 @@ The file `04_testing_sqlite.sql` contains pre-made queries to test the database.
 You will need:
 
 * Oracle SQL Developer
-* Oracle Free Space ???
+* Oracle Database
 * This repository
 
 ### ⚙️ Setup
@@ -144,16 +144,16 @@ cd Healthcare-Database-Manager
 
 **4. Setup the Oracle Database**
 
-Set up Oracle Database using FREEPDB1 as the Pluggable Database (PDB) and choose a password of your liking;
+Set up Oracle Database using `FREEPDB1` as the Pluggable Database (PDB) and choose a password of your liking;
 
 **5. Login as SYSTEM**
 
-Log into FREEPDB1 as user SYSTEM, using the password you have chosen.
-Make sure to select "Service Name" rather than "SID", with FREEPDB1 as the service name;
+Log into `FREEPDB1` as user `SYSTEM`, using the password you have chosen.
+Make sure to select `Service Name` rather than `SID`, with `FREEPDB1` as the service name;
 
 **6. Edit the setup script**
 
-Edit 00_setup.sql to choose the password for the HEALTHCARE user. Change the password on the line that says:
+Open and edit the file `00_setup.sql` to choose the password for the `HEALTHCARE` user. Change the password on the line that says:
 
 ```text
 CREATE USER HEALTHCARE
@@ -162,15 +162,11 @@ IDENTIFIED BY "Your_Password";
 
 **7. Run the setup**
 
-Open and run `00_setup.sql` while logged in as the SYSTEM user to create and setup the HEALTHCARE user;
-```text
-00_setup.sql
-```
-while logged in as the SYSTEM user to create and setup the HEALTHCARE user;
+Run `00_setup.sql` while logged in as the `SYSTEM` user to create and setup the `HEALTHCARE` user;
 
 **8. Login as the HEALTHCARE user**
 
-Log into FREEPDB1 as the HEALTHCARE user, using the password you chose in 00_setup.sql. Again, select "Service Name" and use FREEPDB1;
+Log into `FREEPDB1` as the `HEALTHCARE` user, using the password you chose in `00_setup.sql`. Again, select `Service Name` and use `FREEPDB1`;
 
 **9. Open the script files**
 
