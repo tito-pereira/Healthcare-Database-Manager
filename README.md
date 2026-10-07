@@ -155,20 +155,35 @@ Make sure to select "Service Name" rather than "SID", with FREEPDB1 as the servi
 
 Edit 00_setup.sql to choose the password for the HEALTHCARE user. Change the password on the line that says:
 
-´´´text
+```text
 CREATE USER HEALTHCARE
 IDENTIFIED BY "Your_Password";
-´´´
+```
 
 **7. Run the setup**
 
-Run 00_setup.sql while logged in as the SYSTEM user to create and setup the HEALTHCARE user;
+Open and run `00_setup.sql` while logged in as the SYSTEM user to create and setup the HEALTHCARE user;
+```text
+00_setup.sql
+```
+while logged in as the SYSTEM user to create and setup the HEALTHCARE user;
 
 **8. Login as the HEALTHCARE user**
 
 Log into FREEPDB1 as the HEALTHCARE user, using the password you chose in 00_setup.sql. Again, select "Service Name" and use FREEPDB1;
 
-**9. Login as the HEALTHCARE user**
+**9. Open the script files**
+
+Open the following files:
+```text
+01_tables_oracle.sql
+02_seed_oracle.sql
+03_views_oracle.sql
+04_procedures_oracle.sql
+05_triggers_oracle.sql
+```
+
+**10. Run the scripts**
 
 Run the scripts in the following order:
 ```text
