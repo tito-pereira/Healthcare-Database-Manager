@@ -102,12 +102,35 @@ END;
 --------------------------------------------------------------------------------
 
 CREATE OR REPLACE PROCEDURE create_prescription
-    (p_id NUMBER, p_med NUMBER, p_date DATE)
+    (id_app NUMBER,id_med NUMBER, p_date DATE)
 AS
+    id_pat NUMBER; 
+    total NUMBER;
 BEGIN
-    INSERT INTO Prescriptions
-        (id_appointment, id_medication, date_presc, state_presc)
-    VALUES (p_id, p_med, p_date, 'ACTIVE');
+    
+    SELECT A.id_patient INTO id_pat
+    FROM Appointments A
+    WHERE A.id_appointment = id_app;
+    
+    SELECT COUNT(*) INTO total
+    FROM Appointments A JOIN Prescriptions P ON
+        A.id_appointment = P.id_appointment
+        JOIN Medication M ON M.id_medication = P.id_medication
+    WHERE A.id_patient = id_pat AND M.id_medication = id_med
+        AND P.state_presc = 'ACTIVE';
+    
+    IF total = 0 THEN
+        INSERT INTO Prescriptions
+            (id_appointment, id_medication, date_presc, state_presc)
+        VALUES (id_app, id_med, p_date, 'ACTIVE');
+    ELSE
+        RAISE_APPLICATION_ERROR( -20001,
+            'Patient already has an active prescription for this medication.');
+    END IF;
+    
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            RAISE_APPLICATION_ERROR(-20002, 'Appointment does not exist.');
 END;
 /
 
