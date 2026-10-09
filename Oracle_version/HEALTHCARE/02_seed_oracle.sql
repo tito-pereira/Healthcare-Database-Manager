@@ -17,22 +17,22 @@
 -- ============================================
 
 INSERT INTO Specialty (name_specialty)
-VALUES ('Cardiology');
+VALUES ('Orthodontics');
 
 INSERT INTO Specialty (name_specialty)
-VALUES ('Dermatology');
+VALUES ('Pediatric Dentistry');
 
 INSERT INTO Specialty (name_specialty)
-VALUES ('Pediatrics');
+VALUES ('Prosthodontics');
 
 INSERT INTO Specialty (name_specialty)
-VALUES ('Neurology');
+VALUES ('Endodontics');
 
 INSERT INTO Specialty (name_specialty)
-VALUES ('Orthopedics');
+VALUES ('Periodontology');
 
 INSERT INTO Specialty (name_specialty)
-VALUES ('General Medicine');
+VALUES ('Oral Surgery');
 
 -- ============================================
 -- PATIENTS
