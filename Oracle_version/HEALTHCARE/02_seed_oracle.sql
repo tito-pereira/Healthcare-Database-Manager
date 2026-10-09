@@ -529,6 +529,62 @@ VALUES
 
 INSERT INTO Appointment_History
     (id_appointment, old_state_appoint, new_state_appoint)
+VALUES (1, NULL, 'SCHEDULED');
+
+INSERT INTO Appointment_History
+    (id_appointment, old_state_appoint, new_state_appoint)
+VALUES (2, NULL, 'SCHEDULED');
+
+INSERT INTO Appointment_History
+    (id_appointment, old_state_appoint, new_state_appoint)
+VALUES (3, NULL, 'SCHEDULED');
+
+INSERT INTO Appointment_History
+    (id_appointment, old_state_appoint, new_state_appoint)
+VALUES (4, NULL, 'SCHEDULED');
+
+INSERT INTO Appointment_History
+    (id_appointment, old_state_appoint, new_state_appoint)
+VALUES (5, NULL, 'SCHEDULED');
+
+INSERT INTO Appointment_History
+    (id_appointment, old_state_appoint, new_state_appoint)
+VALUES (6, NULL, 'SCHEDULED');
+
+INSERT INTO Appointment_History
+    (id_appointment, old_state_appoint, new_state_appoint)
+VALUES (7, NULL, 'SCHEDULED');
+
+INSERT INTO Appointment_History
+    (id_appointment, old_state_appoint, new_state_appoint)
+VALUES (9, NULL, 'SCHEDULED');
+
+INSERT INTO Appointment_History
+    (id_appointment, old_state_appoint, new_state_appoint)
+VALUES (10, NULL, 'SCHEDULED');
+
+INSERT INTO Appointment_History
+    (id_appointment, old_state_appoint, new_state_appoint)
+VALUES (12, NULL, 'SCHEDULED');
+
+INSERT INTO Appointment_History
+    (id_appointment, old_state_appoint, new_state_appoint)
+VALUES (13, NULL, 'SCHEDULED');
+
+INSERT INTO Appointment_History
+    (id_appointment, old_state_appoint, new_state_appoint)
+VALUES (14, NULL, 'SCHEDULED');
+
+INSERT INTO Appointment_History
+    (id_appointment, old_state_appoint, new_state_appoint)
+VALUES (16, NULL, 'SCHEDULED');
+
+INSERT INTO Appointment_History
+    (id_appointment, old_state_appoint, new_state_appoint)
+VALUES (18, NULL, 'SCHEDULED');
+
+INSERT INTO Appointment_History
+    (id_appointment, old_state_appoint, new_state_appoint)
 VALUES
     (1, 'SCHEDULED', 'COMPLETED');
 
