@@ -8,12 +8,12 @@
 
 -- ============================================
 -- SPECIALTY
--- Cardiology
--- Dermatology
--- Pediatrics
--- Neurology
--- Orthopedics
--- General Medicine
+-- Orthodontics
+-- Pediatric Dentistry
+-- Prosthodontics
+-- Endodontics
+-- Periodontology
+-- Oral Surgery
 -- ============================================
 
 INSERT INTO Specialty (name_specialty)
