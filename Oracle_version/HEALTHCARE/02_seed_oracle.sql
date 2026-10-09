@@ -39,91 +39,117 @@ VALUES ('General Medicine');
 -- ============================================
 
 INSERT INTO Patients
-    (name_patient, date_birth_pat, email_patient, state_patient)
+    (name_patient, date_birth_pat, gender_patient, email_patient, state_patient)
 VALUES
-('James Roberts', DATE '1974-04-11', 'james.roberts74@gmail.com', 'ACTIVE');
+    ('James Roberts', DATE '1974-04-11', 'MALE',
+    'james.roberts74@gmail.com', 'ACTIVE');
 
-INSERT INTO
-    Patients (name_patient, date_birth_pat, email_patient, state_patient)
+INSERT INTO Patients
+    (name_patient, date_birth_pat, gender_patient, email_patient, state_patient)
 VALUES
-('Emma Wilson', DATE '1992-08-23', 'emma.wilson92@gmail.com', 'ACTIVE');
+    ('Emma Wilson', DATE '1992-08-23', 'FEMALE',
+    'emma.wilson92@gmail.com', 'ACTIVE');
 
-INSERT INTO
-    Patients (name_patient, date_birth_pat, email_patient, state_patient)
-VALUES ('Michael Thompson',
-    DATE '1986-11-05', 'michael.thompson86@gmail.com', 'ACTIVE');
-
-INSERT INTO
-    Patients (name_patient, date_birth_pat, email_patient, state_patient)
+INSERT INTO Patients
+    (name_patient, date_birth_pat, gender_patient, email_patient, state_patient)
 VALUES
-('Grace Walker', DATE '2001-03-17', 'grace.walker01@gmail.com', 'ACTIVE');
+    ('Michael Thompson', DATE '1986-11-05', 'MALE',
+    'michael.thompson86@gmail.com', 'ACTIVE');
 
-INSERT INTO
-    Patients (name_patient, date_birth_pat, email_patient, state_patient)
+INSERT INTO Patients
+    (name_patient, date_birth_pat, gender_patient, email_patient, state_patient)
 VALUES
-('Robert Harris', DATE '1978-09-29', 'robert.harris78@gmail.com', 'ACTIVE');
+    ('Grace Walker', DATE '2001-03-17', 'FEMALE',
+    'grace.walker01@gmail.com', 'ACTIVE');
 
-INSERT INTO
-    Patients (name_patient, date_birth_pat, email_patient, state_patient)
+INSERT INTO Patients
+    (name_patient, date_birth_pat, gender_patient, email_patient, state_patient)
 VALUES
-('Sophie Clark', DATE '1995-12-12', 'sophie.clark95@gmail.com', 'ACTIVE');
+    ('Robert Harris', DATE '1978-09-29', 'MALE',
+    'robert.harris78@gmail.com', 'ACTIVE');
 
-INSERT INTO
-    Patients (name_patient, date_birth_pat, email_patient, state_patient)
+INSERT INTO Patients
+    (name_patient, date_birth_pat, gender_patient, email_patient, state_patient)
 VALUES
-('Thomas Lewis', DATE '1983-04-07', 'thomas.lewis83@gmail.com', 'ACTIVE');
+    ('Sophie Clark', DATE '1995-12-12', 'FEMALE',
+    'sophie.clark95@gmail.com', 'ACTIVE');
 
-INSERT INTO
-    Patients (name_patient, date_birth_pat, email_patient, state_patient)
+INSERT INTO Patients
+    (name_patient, date_birth_pat, gender_patient, email_patient, state_patient)
 VALUES
-('Emily Walker', DATE '1999-06-21', 'emily.walker99@gmail.com', 'ACTIVE');
+    ('Thomas Lewis', DATE '1983-04-07', 'MALE',
+    'thomas.lewis83@gmail.com', 'ACTIVE');
 
-INSERT INTO
-    Patients (name_patient, date_birth_pat, email_patient, state_patient)
+INSERT INTO Patients
+    (name_patient, date_birth_pat, gender_patient, email_patient, state_patient)
 VALUES
-('David Turner', DATE '1969-12-03', 'david.turner69@gmail.com', 'ACTIVE');
+    ('Emily Walker', DATE '1999-06-21', 'FEMALE',
+    'emily.walker99@gmail.com', 'ACTIVE');
 
-INSERT INTO
-    Patients (name_patient, date_birth_pat, email_patient, state_patient)
+INSERT INTO Patients
+    (name_patient, date_birth_pat, gender_patient, email_patient, state_patient)
 VALUES
-('Charlotte White', DATE '1988-01-26', 'charlotte.white88@gmail.com', 'ACTIVE');
+    ('David Turner', DATE '1969-12-03', 'MALE',
+    'david.turner69@gmail.com', 'ACTIVE');
+
+INSERT INTO Patients
+    (name_patient, date_birth_pat, gender_patient, email_patient, state_patient)
+VALUES
+    ('Charlotte White', DATE '1988-01-26', 'FEMALE',
+    'charlotte.white88@gmail.com', 'ACTIVE');
 
 
 -- ============================================
 -- DOCTORS
 -- ============================================
 
-INSERT INTO Doctors (name_doctor, date_birth_doc, email_doctor, state_doctor)
+INSERT INTO Doctors
+    (name_doctor, date_birth_doc, gender_doctor, email_doctor, state_doctor)
 VALUES
-('James Anderson', DATE '1966-07-14', 'james.anderson66@gmail.com', 'ACTIVE');
+    ('James Anderson', DATE '1966-07-14', 'MALE',
+    'james.anderson66@gmail.com', 'ACTIVE');
 
-INSERT INTO Doctors (name_doctor, date_birth_doc, email_doctor, state_doctor)
+INSERT INTO Doctors
+    (name_doctor, date_birth_doc, gender_doctor, email_doctor, state_doctor)
 VALUES
-('Emily Johnson', DATE '1975-03-28', 'emily.johnson75@gmail.com', 'ACTIVE');
+    ('Emily Johnson', DATE '1975-03-28', 'FEMALE',
+    'emily.johnson75@gmail.com', 'ACTIVE');
 
-INSERT INTO Doctors (name_doctor, date_birth_doc, email_doctor, state_doctor)
+INSERT INTO Doctors
+    (name_doctor, date_birth_doc, gender_doctor, email_doctor, state_doctor)
 VALUES
-('William Taylor', DATE '1982-10-16', 'william.taylor82@gmail.com', 'ACTIVE');
+    ('William Taylor', DATE '1982-10-16', 'MALE',
+    'william.taylor82@gmail.com', 'ACTIVE');
 
-INSERT INTO Doctors (name_doctor, date_birth_doc, email_doctor, state_doctor)
+INSERT INTO Doctors
+    (name_doctor, date_birth_doc, gender_doctor, email_doctor, state_doctor)
 VALUES
-('Charlotte Brown', DATE '1990-04-09', 'charlotte.brown90@gmail.com', 'ACTIVE');
+    ('Charlotte Brown', DATE '1990-04-09', 'FEMALE',
+    'charlotte.brown90@gmail.com', 'ACTIVE');
 
-INSERT INTO Doctors (name_doctor, date_birth_doc, email_doctor, state_doctor)
+INSERT INTO Doctors
+    (name_doctor, date_birth_doc, gender_doctor, email_doctor, state_doctor)
 VALUES
-('Daniel Wilson', DATE '1978-11-22', 'daniel.wilson78@gmail.com', 'ACTIVE');
+    ('Daniel Wilson', DATE '1978-11-22', 'MALE',
+    'daniel.wilson78@gmail.com', 'ACTIVE');
 
-INSERT INTO Doctors (name_doctor, date_birth_doc, email_doctor, state_doctor)
+INSERT INTO Doctors
+    (name_doctor, date_birth_doc, gender_doctor, email_doctor, state_doctor)
 VALUES
-('Sarah Miller', DATE '1985-06-18', 'sarah.miller85@gmail.com', 'ACTIVE');
+    ('Sarah Miller', DATE '1985-06-18', 'FEMALE',
+    'sarah.miller85@gmail.com', 'ACTIVE');
 
-INSERT INTO Doctors (name_doctor, date_birth_doc, email_doctor, state_doctor)
+INSERT INTO Doctors
+    (name_doctor, date_birth_doc, gender_doctor, email_doctor, state_doctor)
 VALUES
-('Thomas Davis', DATE '1972-02-09', 'thomas.davis72@gmail.com', 'ACTIVE');
+    ('Thomas Davis', DATE '1972-02-09', 'MALE',
+    'thomas.davis72@gmail.com', 'ACTIVE');
 
-INSERT INTO Doctors (name_doctor, date_birth_doc, email_doctor, state_doctor)
+INSERT INTO Doctors
+    (name_doctor, date_birth_doc, gender_doctor, email_doctor, state_doctor)
 VALUES
-('Olivia Martin', DATE '1988-11-30', 'olivia.martin88@gmail.com', 'ACTIVE');
+    ('Olivia Martin', DATE '1988-11-30', 'FEMALE',
+    'olivia.martin88@gmail.com', 'ACTIVE');
 
 -- ============================================
 -- DOCTOR_SPECIALTY

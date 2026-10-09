@@ -2,6 +2,7 @@ CREATE TABLE Patients (
 	id_patient NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 	name_patient VARCHAR2(300) NOT NULL,
 	date_birth_pat DATE NOT NULL,
+    gender_patient VARCHAR2(10) NOT NULL,
 	email_patient VARCHAR2(100),
     state_patient VARCHAR2(20)
 );
@@ -16,6 +17,7 @@ CREATE TABLE Doctors (
 	name_doctor VARCHAR2(300) NOT NULL,
 	date_birth_doc DATE NOT NULL,
 	email_doctor VARCHAR2(100),
+    gender_doctor VARCHAR2(10) NOT NULL,
     state_doctor VARCHAR2(20)
 );
 
